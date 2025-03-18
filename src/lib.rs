@@ -101,6 +101,7 @@ pub struct PackageFile {
     
     #[serde(skip_serializing_if = "Option::is_none")]
     pub minimum_hub_version: Option<String>,
+    pub dependencies: Vec<Dependency>,
     
     pub entrypoint: InstallationPath,
     pub contents: Vec<ContentBundle>
